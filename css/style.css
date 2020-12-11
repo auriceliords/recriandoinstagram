@@ -1,0 +1,168 @@
+/*  OBS; NOTEI QUE O FLEX BOX SEGUE UMA SEQUÊNCIA FICO MAIS SIMPLES 
+     DE PEGAR A LOGICA DO FLEX
+     SETA O DISPLAY, ALINAMENTO DO OBJETO , JUSTICA ONDE DEVE FICA 
+     DEPOIS SEGUE NORMALMENTE COM A ESTILIZAÇÃO :)
+  
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%; */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(243,243,243);
+    margin: 0;
+    border: 0;
+    display: flex;
+    justify-content: center;
+
+}
+.insta-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 60%;
+    height: 100vh;
+}
+.insta-phone img{
+   height: 40rem;
+   overflow: hidden;
+}
+.insta-logo{
+    width: 15rem;
+}
+/* tive que fazer algumas modifições por contas das fotos */
+.continue{
+    display: inline;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 50%;
+    min-height: 34rem;
+}
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: #fFffff;
+    width: 100%;
+    padding: 1.3rem;
+    border: 1px solid lightgray;
+
+}
+.group:nth-child(1) {
+    min-height: 17rem;
+}
+.group:nth-child(2){
+    height: 6rem;
+}
+.profile-photo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:50px;
+    
+    
+}
+.profile-photo img{
+   width: 100px;
+    margin-top: 2px;
+}
+.instagram-login{
+    background-color: #0095f6;
+    color: #fFffff;
+    padding: 8px;
+    border-radius: 4px;
+    margin-top:10px;
+}
+.instagram-logout{
+    color: #0095f6;
+    margin-top: 1rem;
+}
+.not-accont{
+    color: #0095f6;
+}
+.link-blue{
+    color: #0095f6;
+}
+.get-the-app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+    padding: 1.3rem 0;
+}
+.download{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.app-download{
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+.get-app{
+    margin-bottom: 15px;
+}
+.app-download:nth-child(1){
+    background-image: url(../img/apps.png)
+}
+.app-download:nth-child(2){
+    background-image: url(../img/play.png)
+
+}
+
+/* Aplicando responsividade na div wrapper ou seja em todo o conteainer 
+com o media(){} */
+@media(max-width: 1024px){
+    .insta-wrapper{
+        width: 90%;
+    }
+}
+
+@media(max-width: 650px){
+    .insta-wrapper{
+        width: 90%;
+
+    }
+    .insta-phone{
+        display: none;
+    }
+/* tive que mudar fazer uma manutenção, na class contineu
+por conta da minha foto coloquei a margin auto*/
+    .continue{
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: auto; 
+       
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
